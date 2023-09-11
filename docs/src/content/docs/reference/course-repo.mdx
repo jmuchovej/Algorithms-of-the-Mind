@@ -1,0 +1,45 @@
+---
+title: "Course GitHub Repository"
+description: "How to clone and update the course's GitHub Repository"
+---
+import { Card, LinkCard } from "@astrojs/starlight/components";
+
+<LinkCard
+   title="GitHub Repository"
+   href="https://github.com/cnclgithub/algorithms-of-the-mind"
+   />
+
+<Card icon="warning" title="Warning">
+    For the purposes of our course, perform the following commands while logged in to Grace.
+</Card>
+
+1. Navigate to your home directory
+   ```shell
+   $ cd
+   ```
+1. Clone the course repository
+   ```shell
+   $ git clone https://github.com/CNCLgithub/Algorithms-of-the-Mind.git
+   ```
+1. Enter your local copy of the course repository
+   ```shell
+   $ cd Algorithms-of-the-Mind
+   ```
+
+**To sync your local copy with the course repository, use the following commands in the `Algorithms-of-the-Mind` directory:**
+1. **Stash your local changes**. This will save local modifications to a temporary area that we can restore from.
+   ```shell
+   $ git stash
+   ```
+1. **Fetch changes from `origin`**. Fetches the latest changes from the main course repository.
+   ```shell
+   $ git fetch origin
+   ```
+1. **Merge the updated repository with your local copy**.
+   ```shell
+   $ git merge origin/main
+   ```
+1. **Apply your stashed changes.** You can now apply your stashed changes back to your local copy because we've updated
+   ```shell
+   $ git stash pop
+   ```
